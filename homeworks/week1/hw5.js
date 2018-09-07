@@ -1,20 +1,17 @@
 
 function join(str, concatStr) {
 	let joinAns = '';
-	for (i = 0 ; i < str.length ; i++){
-		joinAns = joinAns + str[i] + concatStr 
+	for (i = 1 ; i < str.length ; i++){
+		joinAns = joinAns + concatStr + str[i]
 	}
-	if(concatStr){
-		return joinAns.substr(0,joinAns.length-1)
-	}else{
-		return joinAns
-	}
+	return str[0] + joinAns
+	
 }
 
 //console.log(join([1, 2, 3], ''))
 //console.log(join(["a", "b", "c"], "!"))
 //console.log(join(["a", 1, "b", 2, "c", 3], ','))
-
+console.log(join([1,2,3], '!!!'))
 
 
 function repeat(str, times) {

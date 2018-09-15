@@ -19,14 +19,15 @@ function add(a, b) {
   for( let i=0 ; i<aArray.length ; i++ ){
     finalArray[i] = String( Number(aArray[i])+Number(bArray[i]) )
   }
-  // 陣列各項相加 console.log(finalArray)
+  // ab陣列各項相加 console.log(finalArray)
 
   for( let i=finalArray.length-1 ; i>0 ; i-- ){
     if (finalArray[i].length !== 1){
       finalArray[i] = String( Number(finalArray[i]-10) )
       finalArray[i-1] = String( Number(finalArray[i-1])+1) 
     }
-  }
+  } //判斷進位
+  
   return  finalArray.join('')
 }
 

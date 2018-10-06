@@ -1,0 +1,141 @@
+ html, body {
+	margin: 0px;
+	background-color: #7e746a38;
+ }
+
+.bannerPic {
+	height:278px; 
+	width:100% ;
+	background-image: url("./banner.jpg");
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	background-position:top center;
+}
+
+.formBorder{
+	position: relative;
+   	padding:0px 20px;
+    justify-content: center;
+    display: flex;
+    top: -95px;
+}
+
+.formArea{
+	border-top: 8px solid  #a99b84;
+	box-shadow: 0px 5px 18px -4px #7A7A7A;
+	box-sizing: border-box;
+	max-width: 640px;
+    padding: 40px 15px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.fHead, .fFooter{
+	padding: 0px 20px;
+}
+
+#title{
+	font-size: 35px;
+	margin-bottom: 20px;
+}
+
+#description{
+	font-size: 13px;
+	margin-bottom: 20px;
+}
+
+.topicBlock {
+	margin-bottom: 5px;
+	padding: 20px 20px;
+}
+
+.topic{
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+
+.detail{
+	font-size: 13px;
+}
+
+.topicBlock input {
+	font-size: 15px;
+	border: 0px solid #ffffff00;
+	padding: 5px;
+	margin-bottom: 20px;
+	background-color: #ffffff00;
+	border-bottom: 1px solid  #b9b9b9;
+
+}
+
+/*去掉chrome input的黃底 (還不知道意思XD) */
+input:-webkit-autofill { 
+     background-color: #fff !important;
+     -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+::placeholder {
+    color:#b9b9b9;
+}
+
+#inputRadio{
+	margin-bottom: 20px;
+	 line-height:30px;
+}
+
+input[type="radio" i ] {
+    cursor: pointer;
+    margin: 0px 3px 0px 0px;
+}
+
+.fFooter input{
+    width: 90px;
+    height: 35px;
+    border-radius: 3px;
+    border: none;
+    color: white;
+    background-color: #0c84e4;
+    cursor:pointer;
+}
+
+.fFooter p{
+    font-size: 13px;
+    color: #5f5f5f;
+    margin: 20px 0px;
+}
+
+.errorMsg{
+	display: none;
+}
+
+.remind, .errorMsg{
+	color: #e01212;
+}
+
+.footer{
+    font-size: 13px;
+    color: #5d5d5d;
+    text-align: center;
+    padding: 40px 30px; 
+}
+
+footer a{
+	color: #828282;
+	font-size: 25px;
+	cursor:pointer;
+	text-decoration:none;
+}
+
+@media only screen and (max-width:450px) {
+ 	.bannerPic{
+ 		height:122px;
+ 		background-size: cover;
+ 	}
+ 	.formBorder{
+ 		top:-80px;
+ 	}
+ 	#title{
+		font-size: 25px;
+	}
+}

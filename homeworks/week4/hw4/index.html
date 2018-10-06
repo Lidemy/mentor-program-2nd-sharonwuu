@@ -1,0 +1,25 @@
+ <!DOCTYPE html>
+ <html>
+ 	<head>
+ 	 	<title> W4_Hw4 </title>
+ 	 	<meta charset="utf-8"/>
+ 	</head>
+ 	<body>
+ 		<div class='title'> hello world ! </div>
+ 		<script>
+ 			// 這題是看直播解答才會的，但是有看懂了，原來 return 還可以這樣用!!
+			function q (selector){ 
+				const element = document.querySelector(selector)
+				return {
+					hide : () => element.style.visibility='hidden',
+					show : () => element.style.visibility='visible',
+				}
+			}
+
+			let element = q('.title')
+			element.hide() //隱藏 hello world ! 
+			element.show() //顯示 hello world ! 
+
+ 		</script>
+ 	</body>
+ </html>

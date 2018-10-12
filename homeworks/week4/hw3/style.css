@@ -10,7 +10,6 @@ header{
 	background-size: 230px auto; 	
 }
 .allStreams {
-	max-width: 1000px;
 	margin:50px auto;
 	padding: 0px 50px;
 	display: flex;
@@ -19,9 +18,10 @@ header{
 }
 
 .singleStream {
-	min-width:400px;
-	height:280px;
-	margin:30px;
+	max-width:320px;
+	min-width:320px;
+	height:230px;
+	margin:20px 10px;
 	border-radius: 10px;
 	overflow: hidden;
 
@@ -42,8 +42,8 @@ a{
 }
 
 .about {
-	min-width:400px;
-	height:80px;
+	min-width:320px;
+	height:65px;
 	box-sizing: border-box;
 	background-color: rgba(12, 24, 33, 0.86);
 	display: flex;
@@ -52,8 +52,8 @@ a{
 
 
 .logo{
-	min-width:60px;
-	min-height:60px;
+	min-width:45px;
+	min-height:45px;
 	border-radius: 100px;
 	margin: auto 20px;
 	overflow: hidden;
@@ -61,7 +61,7 @@ a{
 
 img{
 	display: flex;
-	height: 60px;
+	height: 45px;
 }
 
 .info{
@@ -74,11 +74,12 @@ img{
 
 
 .name, .status {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  width:280px;
-  line-height: 20px;
+	font-size: 14px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width:220px;
+	line-height: 28px;
 }
 
 .singleStream:hover{

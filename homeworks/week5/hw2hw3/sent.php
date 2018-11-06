@@ -37,11 +37,6 @@ if(isset($_POST['loginBTN'])){
 					window.alert('啊喔 密碼錯誤');
 					window.location.href = './index.php';
 				</script>";
-			/*測試失敗 （這樣寫是抓到 sent.php 的 body 嗎 ?? -> 當然失敗XD）
-				echo "<script type=\"text/javascript\">
-						document.querySelector('body').style.backgroundColor=\"red\"
-					</script>;  ";
-				header("location: index.php"); */
 		}
 	}else{
 		echo "<script type=\"text/javascript\">
@@ -55,7 +50,7 @@ if(isset($_POST['loginBTN'])){
 
 <?php  //按下登出 重設 cookie
 if(isset($_POST['logoutBTN'])){
-	setcookie("username", "", time()-3600*24); //登出也要設定時間嗎
+	setcookie("username", "", time()-3600*24);
 	echo "<script type=\"text/javascript\">
 			window.alert('登出成功！ByeBye');
 			window.location.href = './index.php';

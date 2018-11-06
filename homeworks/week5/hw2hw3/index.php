@@ -52,7 +52,7 @@ require("conn.php");
 		<div id="topBlock_login" onsubmit="return checkLogin()" class="bg"> 登入
 			<form method="POST" action="./sent.php">
 				<input type="text" name="username" placeholder="username">
-				<input type="text" name="password" placeholder="password">
+				<input type="password" name="password" placeholder="password">
 				<input class="btns" type="submit" name="loginBTN" value="登入" >
 			</form>
 			<button class="btns" name="signUp" onclick="opensignUp()" >沒帳號註冊</button>
@@ -72,7 +72,7 @@ require("conn.php");
 <!--/////////////// END topBlock ////////////////////-->
 
 
-<?php // 判斷有無 cookie (why:放在這個位置才能正確跑進 js function）
+<?php // 判斷有無 cookie
 	if(!isset($_COOKIE['username'])) {
 	    echo "<script> openVisitor() </script>";
 	}else{

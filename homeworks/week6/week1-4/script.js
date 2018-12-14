@@ -136,7 +136,7 @@ function checkMsg(){
 
 //送出 reply 前 檢查
 function checkReply(id){
-	let content = document.querySelector(`#F${floorNum}`)
+	let content = document.querySelector(`#F${id}`)
 	if( !content.value ){
 		content.placeholder="你要講話啊~";
 		return false

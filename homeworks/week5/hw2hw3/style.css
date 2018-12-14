@@ -57,12 +57,16 @@ header .logoutBTN, header button[name="login"],header button[name="signUp"]{
 	outline: #444444 auto 5px;
 }
 
-input[type='text']{	
+input[type='text'], input[type='password']{	
 	border: 0px;
 	border-bottom: 1px solid #4c4c4c5e;
 	background-color: #e6e6e6;
 }
 input[type='text']:focus{
+	outline: 0px;
+	border-bottom: 1px solid #4c4c4c;
+}
+input[type='password']:focus{
 	outline: 0px;
 	border-bottom: 1px solid #4c4c4c;
 }
@@ -129,7 +133,7 @@ input[type='text']:focus{
 	flex-direction:column;
 }
 
-#topBlock_login input[type='text'], #topBlock_signUp input[type='text']{
+#topBlock_login input[type='text'], #topBlock_signUp input[type='text'], #topBlock_login input[type='password'], #topBlock_signUp input[type='password']{
 	margin-bottom: 11px;
 	width: 200px;
 	height: 18px;

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 	<title>Bootstrap Grid System</title>
+
+	 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+	 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+	 	<style type="text/css">
+	 		header{
+ 				justify-content: space-between;
+				display: flex;
+				padding: 0px 20px;
+	 			text-align: center;
+				line-height: 40px;
+				color: #FFFFFF;
+				margin-bottom: 3px;
+				background-color: #563d7c;
+	 		}
+
+	 		a{
+	 			color: #c8c0d666;	 
+	 		}
+	 		a:hover{
+	 			color: #FFF;	 
+	 		}
+
+	 		.container{
+				max-width: 960px;				
+	 		}
+	 		.row{
+    			background-color: #e5e3ec;
+				margin-bottom: 3px;
+	 		}
+	 		.row div {
+	 			color:#563d7c;
+	 			text-align: center;
+	 			line-height: 33px;
+	 			background-color: #c7c2d5;
+	 			margin:0px auto;
+	 		}
+
+	 		@media (max-width: 576px){
+				.row div:after{
+ 	 	 			content: " -> 12 ";
+ 	 	 		}
+			}
+	 	</style>
+	</head>
+
+
+	<body>
+		<header>
+			<span>Bootstrap Grid System</span>
+			<a href="./GridSystem.html">without Bootstrap > </a>	
+		</header>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12"> 12</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-11"> 11</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-10"> 10 </div>
+			</div>
+			<div class="row">
+				<div class="col-sm-9"> 9 </div>
+			</div>			
+			<div class="row">
+				<div class="col-sm-8"> 8 </div>
+			</div>	
+			<div class="row">
+				<div class="col-sm-7"> 7 </div>
+			</div>
+			<div class="row">
+				<div class="col-sm-6"> 6 </div>
+			</div>
+			<div class="row">
+				<div class="col-sm-5"> 5 </div>
+			</div>
+			<div class="row">
+				<div class="col-sm-4"> 4 </div>
+			</div>	
+			<div class="row">
+				<div class="col-sm-3"> 3 </div>
+			</div>
+			<div class="row">
+				<div class="col-sm-2"> 2 </div>
+			</div>
+			<div class="row">
+				<div class="col-sm-1"> 1 </div>
+			</div>
+
+		</div>
+	</body>
+</html>	

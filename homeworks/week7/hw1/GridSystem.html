@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 	<title>Grid System</title>
+
+	 	<style type="text/css">
+	 		/* screen < 720px */
+	 		@media only screen and (max-width:720px) { 
+ 	 	 		.row div{
+ 	 	 			width:calc(100%/12*12)
+ 	 	 		}
+ 	 	 		.row div:after{
+ 	 	 			content: " -> 12 ";
+ 	 	 		}
+			}
+
+	 		/* screen > 720px */
+	 		.col-12{
+	 			width:calc(100%/12*12);
+	 		}
+	 		.col-11{
+	 			width:calc(100%/12*11);
+	 		}	 		
+	 		.col-10{
+	 			width:calc(100%/12*10);
+	 		}
+	 		.col-9{
+	 			width:calc(100%/12*9);
+	 		}	 		
+	 		.col-8{
+	 			width:calc(100%/12*8);
+	 		}
+	 		.col-7{
+	 			width:calc(100%/12*7);
+	 		}
+	 		.col-6{
+	 			width:calc(100%/12*6);
+	 		}
+	 		.col-5{
+	 			width:calc(100%/12*5);
+	 		}
+	 		.col-4{
+	 			width:calc(100%/12*4);
+	 		}
+	 		.col-3{
+	 			width:calc(100%/12*3);
+	 		}
+	 		.col-2{
+	 			width:calc(100%/12*2);
+	 		}
+	 		.col-1{
+	 			width:calc(100%/12*1);
+	 		}	
+
+			/*others css */
+	 		body{
+	 			margin: 0px;
+	 			padding: 0px;
+	 		}
+	 		header{
+ 				justify-content: space-between;
+				display: flex;
+				padding: 0px 20px;	 			
+	 			text-align: center;
+				line-height: 40px;
+				color: #FFFFFF;
+				margin-bottom: 3px;
+				background-color: #4C4C4C;
+	 		}
+
+	 		a{
+	 			color: #828282;	 
+	 		}
+	 		a:hover{
+	 			color: #FFF;	 
+	 		}
+
+	 		.container{
+				max-width: 960px;
+				margin: 0px auto;
+	 		}
+	 		.row{
+				margin-bottom: 3px;
+				background-color: #c7c7c7;
+	 		}
+	 		.row div {
+	 			color: #FFF;
+	 			text-align: center;
+	 			line-height: 33px;
+	 			margin: 0px auto;
+	 			background-color:#828282;
+	 		}
+	 	</style>
+	</head>
+
+
+	<body>
+		<header>
+			<span>Grid System</span>
+			<a href="./GridSystem_Bootstrap.html"> with Bootstrap > </a>	
+		</header>
+
+		<div class="container"  >
+			<div class="row"  >
+				<div class="col-12" > 12 </div>
+			</div>
+			<div class="row"  >
+				<div class="col-11" > 11 </div>
+			</div>
+			<div class="row"  >
+				<div class="col-10" > 10 </div>
+			</div>
+			<div class="row"  >
+				<div class="col-9" > 9 </div>
+			</div>			
+			<div class="row"  >
+				<div class="col-8" > 8 </div>
+			</div>	
+			<div class="row"  >
+				<div class="col-7" > 7 </div>
+			</div>
+			<div class="row"  >
+				<div class="col-6" > 6 </div>
+			</div>
+			<div class="row"  >
+				<div class="col-5" > 5 </div>
+			</div>
+			<div class="row"  >
+				<div class="col-4" > 4 </div>
+			</div>	
+			<div class="row"  >
+				<div class="col-3" > 3 </div>
+			</div>
+			<div class="row" >
+				<div class="col-2" > 2 </div>
+			</div>
+			<div class="row"  >
+				<div class="col-1" > 1 </div>
+			</div>					
+		</div>
+
+	</body>
+</html>	

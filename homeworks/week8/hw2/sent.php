@@ -199,40 +199,37 @@ if( isset($_POST['deleteFloor']) && !empty($_POST['deleteFloor']) ){
 
 	$floor = $_POST['deleteFloor'];
 
-	//查詢 要刪的樓層 的樓主
-	$stmt = $conn->prepare(" SELECT * FROM sharon_Comments WHERE floorNum=? ");
-	$stmt->bind_param('i',$floor);
-	if( $stmt->execute() ){
-		$row = $stmt->get_result()->fetch_assoc();
+	//查詢 currentUser和要刪的樓層
+	$stmt = $conn->prepare(" SELECT * FROM sharon_Comments WHERE floorNum=? AND username=? ");
+	$stmt->bind_param('is',$floor,$currentUser);
+	$stmt->execute();
 
-		//判斷是不是刪到正確的樓層
-		if( $row['username'] === $currentUser){
+	if( $stmt->get_result()->num_rows > 0 ){
 
-			//確認可以刪除
-			$stmtDelete = $conn->prepare(
-						"UPDATE sharon_Comments 
-						SET content = '此留言已被刪除' ,username = NUll
-						WHERE floorNum=? ");
-			$stmtDelete->bind_param('i',$floor);
-			if ($stmtDelete->execute()){
-				echo json_encode(array(
-					'result' => 'success',
-					'message' => '刪除成功'
-				));
-			}else{
-				echo json_encode(array(
-					'result' => 'failure',
-					'message' => '刪除失敗'
-				));
-			}
-
+		//確認可以刪除
+		$stmtDelete = $conn->prepare(
+					"UPDATE sharon_Comments 
+					SET content = '此留言已被刪除' ,username = NUll
+					WHERE floorNum=? ");
+		$stmtDelete->bind_param('i',$floor);
+		if ($stmtDelete->execute()){
+			echo json_encode(array(
+				'result' => 'success',
+				'message' => '刪除成功'
+			));
 		}else{
-			// 樓主 !== $currentUser
 			echo json_encode(array(
 				'result' => 'failure',
 				'message' => '刪除失敗'
 			));
 		}
+
+	}else{
+		//資料不對 不能刪
+		echo json_encode(array(
+			'result' => 'failure',
+			'message' => '刪除失敗'
+		));
 	}
 }
 ?>
